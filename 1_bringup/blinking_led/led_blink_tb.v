@@ -18,7 +18,6 @@ module led_blink_tb;
         $dumpfile("led_blink_tb.vcd");
         $dumpvars(0, led_blink_tb);
 
-
         $monitor($time, ": led = %b", led);
 
         #200000000 $finish;
