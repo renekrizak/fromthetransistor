@@ -3,12 +3,10 @@
 #include "verilated_vcd_c.h"
 
 
-/*Doesnt compile*/
 int main(int argc, char **argv, char **env) {
     Verilated::commandArgs(argc, argv);
 
     Vled_blink_tb* top = new Vled_blink_tb;
-
 
     Verilated::traceEverOn(true);
     VerilatedVcdC* tfp = new VerilatedVcdC;
@@ -23,7 +21,6 @@ int main(int argc, char **argv, char **env) {
         top->eval();
         tfp->dump(main_time);
         main_time++;
-
     }
 
     tfp->close();
